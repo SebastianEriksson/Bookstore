@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -727,3 +728,7 @@
   </body>
 </html>
 
+=======
+# Bookstore
+Small bookstore repo for school assignment
+>>>>>>> 3b17e759a58af4d951c914012655cc3197e585bd

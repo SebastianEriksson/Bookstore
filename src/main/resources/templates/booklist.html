@@ -1,14 +1,23 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-	    <title>Booklist</title>
+	    <title>Book List</title>
 	    <meta http-equiv="Content-Type" content="text/html"/>
 		<meta charset="UTF-8"/>
 		<link type="text/css" rel="stylesheet" 
-			href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+			href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
 	</head>
 	<body>
-		<h1>Books</h1>
+		<div class="col-md-4">
+			<h1>Books</h1>
+		</div>
+		
+		<div class="col-md-4" style="padding:20px 0">
+			<form th:action="@{/logout}" method="post">
+				<input type="submit" value="Sign Out" class="btn btn-danger"/>
+			</form>
+		</div>
+		
 	    <table class="table table-striped">
 			<tr>
 			    <th>Title</th>
@@ -30,9 +39,5 @@
 	    	</tr>
 	     </table>
 		 <a href="/add" class="btn btn-success">Add Book</a>
-		 
-		<form th:action="@{/logout}" method="post">
-			<input type="submit" value="Sign Out"/>
-		</form>
 	</body>
 </html>

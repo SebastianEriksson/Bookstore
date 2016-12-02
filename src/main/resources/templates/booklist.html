@@ -29,6 +29,10 @@
 	 			<td><a class="btn btn-danger" th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>    		
 	    	</tr>
 	     </table>
-		 <a href="/add" class="btn btn-success">Add Book</a>    	
+		 <a href="/add" class="btn btn-success">Add Book</a>
+		 
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out"/>
+		</form>
 	</body>
 </html>

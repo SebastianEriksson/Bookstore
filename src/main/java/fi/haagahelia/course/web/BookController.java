@@ -48,6 +48,7 @@ public class BookController {
 	}
 	
 	// Add new book to the list
+	@PreAuthorize("hasAuthority('ADMIN')")
 	@RequestMapping(value = "/add")
 	public String addBook(Model model) {
 		model.addAttribute("book", new Book());

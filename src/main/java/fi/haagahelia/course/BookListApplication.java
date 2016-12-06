@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 import fi.haagahelia.course.domain.Book;
@@ -16,10 +18,16 @@ import fi.haagahelia.course.domain.User;
 import fi.haagahelia.course.domain.UserRepository;
 
 @SpringBootApplication
-public class BookListApplication {
+public class BookListApplication extends SpringBootServletInitializer {
+	
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(BookListApplication.class);
+	}
+	
 	private static final Logger log = LoggerFactory.getLogger(BookListApplication.class);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		SpringApplication.run(BookListApplication.class, args);
 	}
 	

@@ -56,10 +56,10 @@ public class User {
 		this.passwordHash = passwordHash;
 	}
 	
-	public String setRole() {
+	public String getRole() {
 		return role;
 	}
-	public void getRole(String role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 	
